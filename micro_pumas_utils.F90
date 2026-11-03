@@ -2903,7 +2903,7 @@ subroutine graupel_riming_liquid_snow(psacws,qsic,qcic,nsic,rho,rhosn,rhog,asn,l
         dum       = max(rhosn/(rhog-rhosn)*pgsacw(i),0._r8)
 
         ! Number concentraiton of embryo graupel from riming of snow
-        nscng(i)  = dum/mg0*rho(i)
+        nscng(i)  = dum/mg0
         ! Limit max number converted to snow number  (dtime here correct? We think yes)
         nscng(i)  = min(nscng(i),nsic(i)/dtime)
 
